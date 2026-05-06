@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <a class="home-button home-btn" href="index.html">
+      <img src="./assets/images/home-btn.png" alt="" />
+    </a>
+    <div class="page-title">
+      <span data-lang-key="title"></span>
+    </div>
+
+    <!-- nav-container -->
+    <div class="language-container">
+      <div class="english active">E</div>
+      <div class="hindi">H</div>
+      <div class="gujrati">G</div>
+    </div>
+
+    <style>
+      main {
+        position: fixed;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+
+        width: 70vw;
+        height: 50vw;
+        display: none;
+        background-color: red;
+      }
+      main img {
+        width: 10%;
+      }
+      .character {
+        position: absolute;
+        bottom: -18vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 14vw;
+        height: 36vw;
+        background-color: white;
+      }
+
+      .body {
+        position: absolute;
+        width: 75%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+      }
+      .x-shadow {
+        position: absolute;
+        width: 70%;
+        bottom: -2%;
+        left: 55%;
+        transform: translateX(-50%);
+        z-index: 5;
+      }
+      .neck {
+        position: absolute;
+        width: 18%;
+        top: 26%;
+        left: 49%;
+        transform: translateX(-50%);
+        z-index: 10;
+      }
+      .face {
+        position: absolute;
+        width: 50%;
+        top: 6%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 50;
+      }
+
+      .eye {
+        width: 15%;
+        z-index: 5 !important;
+      }
+      .eye-1 {
+        position: absolute;
+        top: 16.5%;
+        left: 42%;
+        transform: translateX(-50%);
+        z-index: 50;
+      }
+      .eye-2 {
+        position: absolute;
+        top: 16.5%;
+        left: 58%;
+        transform: translateX(-50%);
+        z-index: 50;
+      }
+
+      .topic {
+        position: absolute;
+        width: 20vw;
+        background-color: white;
+      }
+
+      .topic-1 {
+        top: 10%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <main>
+      <div class="character">
+        <img class="body" src="./assets/images/body.png" alt="" />
+        <!-- <img class="shadow" src="./assets/images/shadow.png" alt="" /> -->
+
+        <img class="face" src="./assets/images/face.png" alt="" />
+        <img class="neck" src="./assets/images/neck.png" alt="" />
+
+        <img class="eye eye-1" src="./assets/images/eye.png" alt="" />
+        <img class="eye eye-2" src="./assets/images/eye.png" alt="" />
+      </div>
+
+      <a class="topic topic-1">
+        <img src="./assets/images/title.png" alt="" />
+        <img src="./assets/images/dots.png" alt="" />
+        <span data-lang-key="title-1"></span>
+      </a>
+      <a class="topic topic-2">
+        <img src="./assets/images/title.png" alt="" />
+        <img src="./assets/images/dots.png" alt="" />
+        <span data-lang-key="title-2"></span>
+      </a>
+      <a class="topic topic-3">
+        <img src="./assets/images/title.png" alt="" />
+        <img src="./assets/images/dots.png" alt="" />
+        <span data-lang-key="title-3"></span>
+      </a>
+    </main>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
