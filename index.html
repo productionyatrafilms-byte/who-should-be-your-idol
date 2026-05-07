@@ -5,115 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/page.css" />
   </head>
+
+  <style>
+    .page-title {
+      position: fixed;
+      bottom: 2vw !important;
+      left: 50%;
+      width: 40%;
+      text-align: center;
+      z-index: 10000;
+      transition: opacity 3s ease;
+      transform: translateX(-50%);
+      background-color: rgba(245, 40, 146, 48%);
+      backdrop-filter: blur(1vw);
+      -webkit-backdrop-filter: blur(1vw);
+      padding: 0.5vw 0;
+      border: 0.3vw solid #f6cb99;
+      border-radius: 2vw;
+    }
+
+    .page-title span {
+      font-size: 3vw;
+      text-align: center;
+      color: white;
+      font-family: "OleoScript";
+      display: block;
+      font-weight: bolder !important;
+      text-shadow: 0.2vw 0.2vw 0.1vw rgba(0, 0, 0, 0.76);
+    }
+
+    .topic {
+      position: absolute;
+      display: block;
+      width: 22vw;
+      height: 15vw;
+      text-decoration: none;
+    }
+
+    .topic-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .topic-white-border,
+    .topic-video-mask {
+      position: absolute;
+      inset: 0;
+
+      -webkit-mask-image: url("./assets/images/title.png");
+      mask-image: url("./assets/images/title.png");
+
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+
+      -webkit-mask-position: center;
+      mask-position: center;
+    }
+
+    .topic-white-border {
+      background-color: #ffd19a;
+      transform: scale(1.04);
+      z-index: 1;
+    }
+
+    .topic-video-mask {
+      transform: scale(1);
+      z-index: 5;
+      overflow: hidden;
+    }
+
+    .topic-video-mask video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+
   <body>
     <a class="home-button home-btn" href="index.html">
       <img src="./assets/images/home-btn.png" alt="" />
     </a>
+
     <div class="page-title">
       <span data-lang-key="title"></span>
     </div>
 
-    <!-- nav-container -->
     <div class="language-container">
       <div class="english active">E</div>
       <div class="hindi">H</div>
       <div class="gujrati">G</div>
     </div>
 
-    <style>
-      main {
-        position: fixed;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-
-        width: 70vw;
-        height: 50vw;
-        display: none;
-        background-color: red;
-      }
-      main img {
-        width: 10%;
-      }
-      .character {
-        position: absolute;
-        bottom: -18vw;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 14vw;
-        height: 36vw;
-        background-color: white;
-      }
-
-      .body {
-        position: absolute;
-        width: 75%;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 100;
-      }
-      .x-shadow {
-        position: absolute;
-        width: 70%;
-        bottom: -2%;
-        left: 55%;
-        transform: translateX(-50%);
-        z-index: 5;
-      }
-      .neck {
-        position: absolute;
-        width: 18%;
-        top: 26%;
-        left: 49%;
-        transform: translateX(-50%);
-        z-index: 10;
-      }
-      .face {
-        position: absolute;
-        width: 50%;
-        top: 6%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 50;
-      }
-
-      .eye {
-        width: 15%;
-        z-index: 5 !important;
-      }
-      .eye-1 {
-        position: absolute;
-        top: 16.5%;
-        left: 42%;
-        transform: translateX(-50%);
-        z-index: 50;
-      }
-      .eye-2 {
-        position: absolute;
-        top: 16.5%;
-        left: 58%;
-        transform: translateX(-50%);
-        z-index: 50;
-      }
-
-      .topic {
-        position: absolute;
-        width: 20vw;
-        background-color: white;
-      }
-
-      .topic-1 {
-        top: 10%;
-        transform: translate(-50%, -50%);
-      }
-    </style>
     <main>
       <div class="character">
+        <img class="shadow" src="./assets/images/shadow.png" alt="" />
         <img class="body" src="./assets/images/body.png" alt="" />
-        <!-- <img class="shadow" src="./assets/images/shadow.png" alt="" /> -->
-
         <img class="face" src="./assets/images/face.png" alt="" />
         <img class="neck" src="./assets/images/neck.png" alt="" />
 
@@ -121,22 +114,99 @@
         <img class="eye eye-2" src="./assets/images/eye.png" alt="" />
       </div>
 
-      <a class="topic topic-1">
-        <img src="./assets/images/title.png" alt="" />
-        <img src="./assets/images/dots.png" alt="" />
-        <span data-lang-key="title-1"></span>
+      <a class="topic topic-1" href="topic-1.html">
+        <div class="topic-frame">
+          <div class="topic-white-border"></div>
+
+          <div class="topic-video-mask">
+            <video
+              src="./assets/videos/1.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+
+          <img class="dots" src="./assets/images/dots.png" alt="" />
+          <span data-lang-key="title-1"></span>
+        </div>
       </a>
-      <a class="topic topic-2">
-        <img src="./assets/images/title.png" alt="" />
-        <img src="./assets/images/dots.png" alt="" />
-        <span data-lang-key="title-2"></span>
+
+      <a class="topic topic-2" href="topic-2.html">
+        <div class="topic-frame">
+          <div class="topic-white-border"></div>
+
+          <div class="topic-video-mask">
+            <video
+              src="./assets/videos/2.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+
+          <img class="dots" src="./assets/images/dots.png" alt="" />
+          <span data-lang-key="title-2"></span>
+        </div>
       </a>
-      <a class="topic topic-3">
-        <img src="./assets/images/title.png" alt="" />
-        <img src="./assets/images/dots.png" alt="" />
-        <span data-lang-key="title-3"></span>
+
+      <a class="topic topic-3" href="topic-3.html">
+        <div class="topic-frame">
+          <div class="topic-white-border"></div>
+
+          <div class="topic-video-mask">
+            <video
+              src="./assets/videos/3.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+
+          <img class="dots" src="./assets/images/dots.png" alt="" />
+          <span data-lang-key="title-3"></span>
+        </div>
       </a>
     </main>
+
+    <script>
+      const main = document.querySelector("main");
+      const topics = document.querySelectorAll(".topic");
+
+      topics.forEach((topic) => {
+        topic.addEventListener("mouseenter", () => {
+          main.classList.remove(
+            "hover-topic-1",
+            "hover-topic-2",
+            "hover-topic-3",
+          );
+
+          if (topic.classList.contains("topic-1")) {
+            main.classList.add("hover-topic-1");
+          }
+
+          if (topic.classList.contains("topic-2")) {
+            main.classList.add("hover-topic-2");
+          }
+
+          if (topic.classList.contains("topic-3")) {
+            main.classList.add("hover-topic-3");
+          }
+        });
+
+        topic.addEventListener("mouseleave", () => {
+          main.classList.remove(
+            "hover-topic-1",
+            "hover-topic-2",
+            "hover-topic-3",
+          );
+        });
+      });
+    </script>
+
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
