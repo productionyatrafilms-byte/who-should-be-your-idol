@@ -412,7 +412,7 @@ main.hover-topic-3 .eye-2 {
 
 .topic span {
   position: absolute;
-  width: 70%;
+  width: 60%;
   font-size: 2vw;
   font-family: "OleoScript";
   color: white;
@@ -447,7 +447,7 @@ main.hover-topic-3 .eye-2 {
 }
 
 .topic-3:hover span {
-  left: 26vw;
+  left: 29vw;
 }
 
 .pages {
