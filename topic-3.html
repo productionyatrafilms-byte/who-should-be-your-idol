@@ -64,6 +64,15 @@
         z-index: 5;
       }
 
+      .dots {
+        position: absolute;
+        width: 22%;
+        display: block;
+        object-fit: contain;
+        top: 20vw;
+        left: 29vw;
+        z-index: 1000;
+      }
       .video-border-layer,
       .video-mask-layer {
         position: absolute;
@@ -256,6 +265,7 @@
       </button>
 
       <div class="video-container">
+        <img class="dots" src="./assets/images/dots.png" alt="" />
         <div class="video-border-layer"></div>
 
         <div class="video-mask-layer">
